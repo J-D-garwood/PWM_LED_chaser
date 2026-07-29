@@ -1,10 +1,78 @@
 m255
 K4
 z2
+Z0 !s12c _opt1
+Z1 !s99 nomlopt
+R0
+R1
+!s11f vlog 2025.2 2025.05, May 31 2025
 13
 !s112 1.1
 !i10d 8192
 !i10e 25
 !i10f 100
 cModel Technology
-dC:/Users/garwo/FPGAProjects/PWM_LED_Chaser
+Z2 dC:/Users/garwo/FPGAProjects/PWM_LED_Chaser
+T_opt1
+!i145 1
+!i144 0
+!s110 1785322252
+VcC=h:oz4IjDhCaKJ[^HGY0
+04 10 4 work pwm_gen_tb fast 0
+=1-78862e4e1417-6a69db0b-23a-8010
+R1
+!s12f OEM100
+!s12b OEM100
+!s124 OEM10U2 
+!s135 nogc
+o-quiet -auto_acc_if_foreign -work work +acc
+tCvgOpt 0 defaultOptions 1107585188
+n@_opt1
+OL;O;2025.2;82
+R2
+vpwm_gen_tb
+Z3 2pwm_generator.v|pwm_gen_tb.v
+Z4 !s110 1785322260
+!i10b 1
+!s100 UIN[hNOUe6LP2>YffDjH^0
+IJK;ERn]m2_YR:^T7QGEkI3
+R2
+w1785322228
+8pwm_gen_tb.v
+Fpwm_gen_tb.v
+!i122 10
+L0 3 37
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2025.2;82
+r1
+!s85 0
+31
+Z7 !s108 1785322260.000000
+!s107 pwm_gen_tb.v|pwm_generator.v|
+Z8 !s90 -reportprogress|300|pwm_generator.v|pwm_gen_tb.v|
+!i113 0
+Z9 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z10 tCvgOpt 0 defaultOptions 1085333592
+vpwm_generator
+R3
+R4
+!i10b 1
+!s100 VWfV90EKRCm8fS82Y5Q5C1
+II:BbhGSj_cnKkjg`S37OB1
+R2
+w1785320356
+8pwm_generator.v
+Fpwm_generator.v
+!i122 10
+L0 1 53
+R5
+R6
+r1
+!s85 0
+31
+R7
+Z11 !s107 pwm_gen_tb.v|pwm_generator.v|
+R8
+!i113 0
+R9
+R10
