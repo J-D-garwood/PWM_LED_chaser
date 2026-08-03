@@ -1,9 +1,15 @@
 m255
 K4
 z2
-Z0 !s12c _opt1
+Z0 !s12c _opt3
 Z1 !s99 nomlopt
 R0
+R1
+R0
+R1
+Z2 !s12c _opt1
+R1
+R2
 R1
 !s11f vlog 2025.2 2025.05, May 31 2025
 13
@@ -12,67 +18,113 @@ R1
 !i10e 25
 !i10f 100
 cModel Technology
-Z2 dC:/Users/garwo/FPGAProjects/PWM_LED_Chaser
-T_opt1
+Z3 dC:/Users/garwo/FPGAProjects/PWM_LED_Chaser
+T_opt3
 !i145 1
 !i144 0
-!s110 1785322252
-VcC=h:oz4IjDhCaKJ[^HGY0
-04 10 4 work pwm_gen_tb fast 0
-=1-78862e4e1417-6a69db0b-23a-8010
+!s110 1785760874
+VA3ofSEmT@B3gKaUgc4;<?3
+04 8 4 work fader_tb fast 0
+=1-78862e4e1417-6a708c69-357-6a1c
 R1
 !s12f OEM100
 !s12b OEM100
-!s124 OEM10U2 
+!s124 OEM10U3 
 !s135 nogc
 o-quiet -auto_acc_if_foreign -work work +acc
 tCvgOpt 0 defaultOptions 1107585188
-n@_opt1
+n@_opt3
 OL;O;2025.2;82
-R2
-vpwm_gen_tb
-Z3 2pwm_generator.v|pwm_gen_tb.v
-Z4 !s110 1785322260
+R3
+vfader
+Z4 2fader.v|fader_tb.v
+Z5 !s110 1785760884
 !i10b 1
-!s100 UIN[hNOUe6LP2>YffDjH^0
-IJK;ERn]m2_YR:^T7QGEkI3
-R2
-w1785322228
-8pwm_gen_tb.v
-Fpwm_gen_tb.v
-!i122 10
-L0 3 37
-Z5 VDg1SIo80bB@j0V0VzS_@n1
-Z6 OL;L;2025.2;82
+!s100 6i2gDIng?`dVne9Nc64_U3
+IIU85Dk^Z=W7k8@a4<K;b=3
+R3
+w1785760522
+8fader.v
+Ffader.v
+!i122 21
+L0 1 46
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 OL;L;2025.2;82
 r1
 !s85 0
 31
-Z7 !s108 1785322260.000000
-!s107 pwm_gen_tb.v|pwm_generator.v|
-Z8 !s90 -reportprogress|300|pwm_generator.v|pwm_gen_tb.v|
+Z8 !s108 1785760884.000000
+Z9 !s107 fader_tb.v|fader.v|
+Z10 !s90 -reportprogress|300|fader.v|fader_tb.v|
 !i113 0
-Z9 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z10 tCvgOpt 0 defaultOptions 1085333592
-vpwm_generator
-R3
+Z11 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z12 tCvgOpt 0 defaultOptions 1085333592
+vfader_tb
 R4
+R5
+!i10b 1
+!s100 SLndNaMgLVzofl:l;TI?f3
+I`<7FzV_GZSRj7E>8L<5D50
+R3
+w1785760849
+Z13 8fader_tb.v
+Z14 Ffader_tb.v
+!i122 21
+Z15 L0 3 33
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R12
+vpwm_gen_tb
+R4
+!s110 1785760187
+!i10b 1
+!s100 gkQ@Gh<zRH[4WRBoATkGA2
+I4dgjP3i_9Yi^z>gFSJ`B`0
+R3
+w1785760029
+R13
+R14
+!i122 14
+R15
+R6
+R7
+r1
+!s85 0
+31
+!s108 1785760187.000000
+R9
+R10
+!i113 0
+R11
+R12
+vpwm_generator
+2pwm_generator.v|pwm_gen_tb.v
+!s110 1785322260
 !i10b 1
 !s100 VWfV90EKRCm8fS82Y5Q5C1
 II:BbhGSj_cnKkjg`S37OB1
-R2
+R3
 w1785320356
 8pwm_generator.v
 Fpwm_generator.v
 !i122 10
 L0 1 53
-R5
 R6
+R7
 r1
 !s85 0
 31
-R7
-Z11 !s107 pwm_gen_tb.v|pwm_generator.v|
-R8
+!s108 1785322260.000000
+!s107 pwm_gen_tb.v|pwm_generator.v|
+!s90 -reportprogress|300|pwm_generator.v|pwm_gen_tb.v|
 !i113 0
-R9
-R10
+R11
+R12
