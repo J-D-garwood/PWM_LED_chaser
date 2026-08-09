@@ -5,16 +5,15 @@
 module chaser (
     input clk,
     input rst_n,
+    input [31:0] period,
     output reg [3:0] out
 );
     reg [31:0] counter;
-    reg [31:0] period;
 
     always @(posedge clk) begin
         if (!rst_n) begin
             out <= 4'b0;
             counter <= 32'b0;
-            period <= 32'h000000FF;
         end else begin
             if (counter == period) begin 
                 counter <= 32'b0;

@@ -1,25 +1,31 @@
-//32'd100 is still hardcoded while pwm_generator #() takes PERIOD as a parameter. 
-//They agree only because you left the default at 100. Change PERIOD and the fader 
-//silently ramps to the wrong ceiling. Make it one shared parameter passed to both —
-// this is the constraint about parameterizing timing constants.
-
-//counter == period should be >=. period is an input port, not a parameter. If it 
-// drops while counter is already past the new value, you miss the match and stall 
-//for 2³² cycles.
-
-//init is unvalidated. The comment says 0–100, nothing enforces it. Feed it 150 and
-// the up-ramp never hits == 100, so duty climbs to 4 billion and wraps. The PWM's 
-//error will fire, so you'd notice — but the fader itself has no opinion, and error is
-// still a bare passthrough.
-
-//Minor: both endpoints are held for two step-periods, since the turnaround cycle flips up without moving duty. Fine if deliberate, worth a comment either way.
-//R2 risk: 100 linear steps. The 0→1 step is a doubling of brightness, the 99→100 step is a 1% change. That's the stair-stepping the requirement calls out.
-//Fix 1 and 2 before you put it on hardware.
-
-
-
-
-
+// ---------------------------------------------------------------------------
+// KNOWN ISSUE (R2): linear duty ramp, non-linear perception.
+//
+// This fader steps duty by a constant +/-1 out of 100. The LED's light output
+// really does change by 1% of full scale each step, but the eye doesn't
+// measure light — it measures ratio. Roughly, perceived brightness follows a
+// power law (Stevens' law, exponent ~0.3-0.5 for point sources), so what
+// registers as "one step brighter" is a constant *multiplication*, not a
+// constant addition.
+//
+// Consequence at the two ends of the ramp:
+//   duty  0 ->  1 : light output doubles (x2.0)  -> large, obvious jump
+//   duty 50 -> 51 : +2%                          -> barely noticeable
+//   duty 99 ->100 : +1%                          -> invisible
+//
+// So the ramp appears to lurch out of black in a few visible stairs, then
+// crawl through an almost static bright region. Same increment, wildly
+// different apparent effect. This is the stair-stepping R2 prohibits.
+//
+// Fix (deferred — leaving linear for now to observe the artifact):
+// make each step a constant ratio instead of a constant increment. Options:
+//   (a) ramp an index i and drive duty = f(i) where f is convex, e.g. i*i
+//       scaled to PERIOD — cheap, one multiplier or a shift-add.
+//   (b) a small ROM LUT of ~64 pre-computed gamma-corrected duty values
+//       (duty = PERIOD * (i/N)^2.2) — exact, costs one block RAM or LUTs.
+// Either way PERIOD must grow: fine ratios near zero need more resolution
+// than 100 counts can express, since the smallest nonzero step is 1/100.
+// ---------------------------------------------------------------------------
 
 
 module fader (

@@ -65,6 +65,7 @@ o-quiet -auto_acc_if_foreign -work work +acc
 tCvgOpt 0 defaultOptions 1107585188
 n@_opt4
 OL;O;2025.2;82
+R4
 vchaser
 Z5 2chaser.v|chaser_tb.v
 Z6 !s110 1786249264
@@ -223,6 +224,29 @@ r1
 !s108 1785322260.000000
 !s107 pwm_gen_tb.v|pwm_generator.v|
 !s90 -reportprogress|300|pwm_generator.v|pwm_gen_tb.v|
+!i113 0
+R14
+R15
+vtop
+2top.v
+!s110 1786251607
+!i10b 1
+!s100 :Gc83e3dQ7bMLogWFn_PF2
+Ie]kVRNn7=F0TRUc>GO=YC0
+R4
+w1786251597
+8top.v
+Ftop.v
+!i122 45
+L0 3 117
+R9
+R10
+r1
+!s85 0
+31
+!s108 1786251607.000000
+!s107 top.v|
+!s90 -reportprogress|300|top.v|
 !i113 0
 R14
 R15
