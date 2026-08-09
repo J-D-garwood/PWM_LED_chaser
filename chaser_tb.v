@@ -4,21 +4,19 @@ module chaser_tb;
 
     reg clk;
     reg rst_n;
-    reg [31:0] period;
-    wire out1;
-    wire out2;
-    wire out3;
-    wire error;
+    wire [3:0] out;
+    wire bit1;
+    wire bit2;
+    wire bit3;
+    wire bit4;    
 
     chaser dut (
         .clk(clk),
         .rst_n(rst_n),
-        .period(period),
-        .out1(out1),
-        .out2(out2),
-        .out3(out3),
-        .error(error)
+        .out(out)
     );
+
+    assign {bit1, bit2, bit3, bit4} = out;
 
     initial clk = 1'b0;
     always #5 clk = ~clk;
@@ -28,10 +26,8 @@ module chaser_tb;
         $dumpvars(0, chaser_tb);
 
         rst_n = 1'b0;
-        period = 32'h00000000;
         #50
         rst_n = 1'b1;
-        period = 32'h0000000F;
         #50000
         $finish;
     end

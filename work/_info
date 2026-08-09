@@ -1,39 +1,45 @@
 m255
 K4
 z2
-Z0 !s12c _opt3
+Z0 !s12c _opt4
 Z1 !s99 nomlopt
 R0
 R1
 R0
 R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-Z2 !s12c _opt1
+Z2 !s12c _opt3
 R1
 R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+Z3 !s12c _opt1
+R1
+R3
 R1
 !s11f vlog 2025.2 2025.05, May 31 2025
 13
@@ -42,58 +48,58 @@ R1
 !i10e 25
 !i10f 100
 cModel Technology
-Z3 dC:/Users/garwo/FPGAProjects/PWM_LED_Chaser
-T_opt3
+Z4 dC:/Users/garwo/FPGAProjects/PWM_LED_Chaser
+T_opt4
 !i145 1
 !i144 0
-!s110 1785934270
-VHYKe^7;e4DEFWeZLKcF582
+!s110 1786249271
+VS2?Y;89W`@H7VSF?^Ke]G0
 04 9 4 work chaser_tb fast 0
-=1-78862e4e1417-6a7331bd-165-6fa8
+=1-78862e4e1417-6a780036-195-518c
 R1
 !s12f OEM100
 !s12b OEM100
-!s124 OEM10U8 
+!s124 OEM10U2 
 !s135 nogc
 o-quiet -auto_acc_if_foreign -work work +acc
 tCvgOpt 0 defaultOptions 1107585188
-n@_opt3
+n@_opt4
 OL;O;2025.2;82
 vchaser
-Z4 2chaser.v|chaser_tb.v
-Z5 !s110 1785934259
+Z5 2chaser.v|chaser_tb.v
+Z6 !s110 1786249264
 !i10b 1
-!s100 PDGNCB:IBAJg?T9^[n<Ci1
-IZf<V4z7ZNL@9Y8?NVnzOe0
-R3
-w1785934239
-Z6 8chaser.v
-Z7 Fchaser.v
-!i122 38
-Z8 L0 1 47
+!s100 S?gYb@9>n@E_2l3GFCIJB1
+IjbZ:nR0d8Gd6Q[femdigT1
+R4
+w1786249239
+Z7 8chaser.v
+Z8 Fchaser.v
+!i122 44
+L0 5 27
 Z9 VDg1SIo80bB@j0V0VzS_@n1
 Z10 OL;L;2025.2;82
 r1
 !s85 0
 31
-Z11 !s108 1785934259.000000
+Z11 !s108 1786249264.000000
 Z12 !s107 chaser_tb.v|chaser.v|
 Z13 !s90 -reportprogress|300|chaser.v|chaser_tb.v|
 !i113 0
 Z14 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 Z15 tCvgOpt 0 defaultOptions 1085333592
 vchaser_tb
-R4
 R5
+R6
 !i10b 1
-!s100 jRR1C7f@HHAN2>24cP3gK1
-IKU=741E0^Nci1@3[Qfbal0
-R3
-w1785933955
+!s100 oziP2iI7c1]iAh8IO9RA00
+IB1YfdFE[<kaiF1499<loE3
+R4
+w1786249235
 8chaser_tb.v
 Fchaser_tb.v
-!i122 38
-L0 3 36
+!i122 44
+L0 3 32
 R9
 R10
 r1
@@ -111,7 +117,7 @@ Z17 !s110 1785932190
 !i10b 1
 !s100 jzH>cOaR[9RSRI]hJL:az1
 I`zJ:1JfAjXZ;5a;HFMHV>2
-R3
+R4
 w1785930510
 8fader.v
 Ffader.v
@@ -134,7 +140,7 @@ R17
 !i10b 1
 !s100 JFgH]aneKo7Sb63W?JS_<3
 Icjh73T;n2aYk[G30Fg@[[1
-R3
+R4
 w1785932151
 Z21 8fader_tb.v
 Z22 Ffader_tb.v
@@ -157,12 +163,12 @@ vled_chaser
 !i10b 1
 !s100 bmNRg0al_9m_6A?R>_0LN3
 IOQiGMUJ2?VfI3TC9zaE552
-R3
+R4
 w1785933042
-R6
 R7
-!i122 31
 R8
+!i122 31
+L0 1 47
 R9
 R10
 r1
@@ -180,7 +186,7 @@ R16
 !i10b 1
 !s100 gkQ@Gh<zRH[4WRBoATkGA2
 I4dgjP3i_9Yi^z>gFSJ`B`0
-R3
+R4
 w1785760029
 R21
 R22
@@ -203,7 +209,7 @@ vpwm_generator
 !i10b 1
 !s100 VWfV90EKRCm8fS82Y5Q5C1
 II:BbhGSj_cnKkjg`S37OB1
-R3
+R4
 w1785320356
 8pwm_generator.v
 Fpwm_generator.v
