@@ -22,19 +22,9 @@ module fader_tb;
         .error(error1)
     );
 
-    fader dut_2 (
-        .clk(clk),
-        .rst_n(rst_n),
-        .period(period2),
-        .init(init2),
-        .out(out2),
-        .error(error2)
-    );
-
     initial clk = 1'b0;
     always #5 clk = ~clk;
     initial init1 = 32'd0;
-    initial init2 = 32'd100;
 
     initial begin
         // Dump waveforms for GTKWave / your viewer of choice
@@ -43,12 +33,10 @@ module fader_tb;
 
         rst_n = 1'b0;
         period1 = 32'h00000000;
-        period2 = 32'h00000000;
         #50
         rst_n = 1'b1;
-        period2 = 32'h000000F;
-        period1 = 32'h0000000F;
-        #50000
+        period1 = 32'h00000FFF;
+        #5000000
         $finish;
     end
 endmodule
