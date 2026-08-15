@@ -40,7 +40,7 @@ module fader (
     localparam integer BRIGHT_STEPS = 63;
     localparam integer BRIGHT_WIDTH = 20;
     
-    reg [BRIGHT_WIDTH-1:0] bright_lut [0:BRIGHT_STEPS-1];
+    reg [BRIGHT_WIDTH-1:0] bright_lut [0:BRIGHT_STEPS];
     
 initial begin
         bright_lut[ 0] = 20'd0      ;  // 00000
@@ -124,10 +124,10 @@ initial begin
 
     always @(posedge clk) begin
         if (!rst_n) begin
-            duty <= 1'b0;
+            duty <= 32'b0;
             counter <= 32'b0;
             up <= 1'b1;
-            idx <= 1'b0;
+            idx <= 6'b0;
         end else begin 
             if (counter >= period) begin
                 if (up) begin

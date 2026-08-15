@@ -11,7 +11,7 @@ module chaser_to_pwm (
         if (!rst_n) begin
             duty <= 32'b0;
         end else begin
-            if (on) duty <= 32'd10000;
+            if (on) duty <= 32'd100;
             else duty <= 32'b0;
         end
     end

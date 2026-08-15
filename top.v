@@ -27,11 +27,13 @@ module top (
     wire pwm_out_2;
     wire pwm_out_3;
     wire pwm_out_4;
+    wire pwm_out_5;
 
     assign led1 = ~pwm_out_1;
     assign led2 = ~pwm_out_2;
     assign led3 = ~pwm_out_3;
     assign led4 = ~pwm_out_4;
+    assign led5 = ~pwm_out_5;
 
     wire err1;
     wire err2;
@@ -55,7 +57,7 @@ module top (
         .out(chaser_out)
     );
 
-    assign {chase_con_1, chase_con_2, chase_con_3, chase_con_4} = chaser_out;
+    assign {chase_con_4, chase_con_3, chase_con_2, chase_con_1} = chaser_out;
 
     chaser_to_pwm gen1(
         .clk(clk),
@@ -125,7 +127,7 @@ module top (
         .rst_n(rst_n),
         .period(FADE_STEP),
         .init(init),
-        .out(led5),
+        .out(pwm_out_5),
         .error(err5)
     );
 
