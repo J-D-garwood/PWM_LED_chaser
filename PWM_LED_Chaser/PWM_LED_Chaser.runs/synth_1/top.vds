@@ -4,12 +4,12 @@ INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detect
 # SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
 # IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
 # SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
-# Start of session at: Tue Aug 11 20:08:46 2026
-# Process ID         : 31312
-# Current directory  : C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/project_1/project_1.runs/synth_1
+# Start of session at: Sat Aug 15 19:52:19 2026
+# Process ID         : 37672
+# Current directory  : C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/PWM_LED_Chaser/PWM_LED_Chaser.runs/synth_1
 # Command line       : vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
-# Log file           : C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/project_1/project_1.runs/synth_1/top.vds
-# Journal file       : C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/project_1/project_1.runs/synth_1\vivado.jou
+# Log file           : C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/PWM_LED_Chaser/PWM_LED_Chaser.runs/synth_1/top.vds
+# Journal file       : C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/PWM_LED_Chaser/PWM_LED_Chaser.runs/synth_1\vivado.jou
 # Running On         : Laptop_123456
 # Platform           : Windows 11
 # Operating System   : 26200
@@ -18,12 +18,12 @@ INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detect
 # CPU Physical cores : 12
 # CPU Logical cores  : 12
 # Host memory        : 16757 MB
-# Swap memory        : 13421 MB
-# Total Virtual      : 30179 MB
-# Available Virtual  : 5953 MB
+# Swap memory        : 15708 MB
+# Total Virtual      : 32466 MB
+# Available Virtual  : 8563 MB
 #-----------------------------------------------------------
 source top.tcl -notrace
-create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 686.500 ; gain = 269.160
+create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 685.379 ; gain = 270.078
 Command: synth_design -top top -part xc7a35tfgg484-1
 Starting synth_design
 Attempting to get a license for feature 'Vivado_Synthesis' and/or device 'xc7a35t'
@@ -32,71 +32,104 @@ INFO: [Device 21-403] Loading part xc7a35tfgg484-1
 INFO: [Designutils 20-5008] Incremental synthesis strategy default
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 31196
+INFO: [Synth 8-7075] Helper process launched with PID 19192
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1453.148 ; gain = 578.949
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1452.422 ; gain = 578.078
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/project_1/project_1.srcs/sources_1/imports/PWM_LED_Chaser/top.v:3]
+INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/PWM_LED_Chaser/PWM_LED_Chaser.srcs/sources_1/imports/PWM_LED_Chaser/top.v:3]
 INFO: [Synth 8-6157] synthesizing module 'IBUFDS' [C:/AMDDesignTools/2026.1/Vivado/scripts/rt/data/unisim_comp.v:82833]
 	Parameter IOSTANDARD bound to: DIFF_SSTL15 - type: string 
 INFO: [Synth 8-6155] done synthesizing module 'IBUFDS' (0#1) [C:/AMDDesignTools/2026.1/Vivado/scripts/rt/data/unisim_comp.v:82833]
-INFO: [Synth 8-6157] synthesizing module 'chaser' [C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/project_1/project_1.srcs/sources_1/imports/PWM_LED_Chaser/chaser.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'chaser' (0#1) [C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/project_1/project_1.srcs/sources_1/imports/PWM_LED_Chaser/chaser.v:5]
-INFO: [Synth 8-6157] synthesizing module 'chaser_to_pwm' [C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/project_1/project_1.srcs/sources_1/imports/PWM_LED_Chaser/chaser_to_pwm.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'chaser_to_pwm' (0#1) [C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/project_1/project_1.srcs/sources_1/imports/PWM_LED_Chaser/chaser_to_pwm.v:3]
-INFO: [Synth 8-6157] synthesizing module 'pwm_generator' [C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/project_1/project_1.srcs/sources_1/imports/PWM_LED_Chaser/pwm_generator.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'pwm_generator' (0#1) [C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/project_1/project_1.srcs/sources_1/imports/PWM_LED_Chaser/pwm_generator.v:1]
-INFO: [Synth 8-6157] synthesizing module 'fader' [C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/project_1/project_1.srcs/sources_1/imports/PWM_LED_Chaser/fader.v:31]
-INFO: [Synth 8-6155] done synthesizing module 'fader' (0#1) [C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/project_1/project_1.srcs/sources_1/imports/PWM_LED_Chaser/fader.v:31]
-INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/project_1/project_1.srcs/sources_1/imports/PWM_LED_Chaser/top.v:3]
+INFO: [Synth 8-6157] synthesizing module 'chaser' [C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/PWM_LED_Chaser/PWM_LED_Chaser.srcs/sources_1/imports/PWM_LED_Chaser/chaser.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'chaser' (0#1) [C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/PWM_LED_Chaser/PWM_LED_Chaser.srcs/sources_1/imports/PWM_LED_Chaser/chaser.v:5]
+INFO: [Synth 8-6157] synthesizing module 'chaser_to_pwm' [C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/PWM_LED_Chaser/PWM_LED_Chaser.srcs/sources_1/imports/PWM_LED_Chaser/chaser_to_pwm.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'chaser_to_pwm' (0#1) [C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/PWM_LED_Chaser/PWM_LED_Chaser.srcs/sources_1/imports/PWM_LED_Chaser/chaser_to_pwm.v:3]
+INFO: [Synth 8-6157] synthesizing module 'pwm_generator' [C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/PWM_LED_Chaser/PWM_LED_Chaser.srcs/sources_1/imports/PWM_LED_Chaser/pwm_generator.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'pwm_generator' (0#1) [C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/PWM_LED_Chaser/PWM_LED_Chaser.srcs/sources_1/imports/PWM_LED_Chaser/pwm_generator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'fader' [C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/PWM_LED_Chaser/PWM_LED_Chaser.srcs/sources_1/imports/PWM_LED_Chaser/fader.v:31]
+WARNING: [Synth 8-324] index 63 out of range [C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/PWM_LED_Chaser/PWM_LED_Chaser.srcs/sources_1/imports/PWM_LED_Chaser/fader.v:109]
+INFO: [Synth 8-6155] done synthesizing module 'fader' (0#1) [C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/PWM_LED_Chaser/PWM_LED_Chaser.srcs/sources_1/imports/PWM_LED_Chaser/fader.v:31]
+INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/PWM_LED_Chaser/PWM_LED_Chaser.srcs/sources_1/imports/PWM_LED_Chaser/top.v:3]
+WARNING: [Synth 8-7129] Port init[31] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[30] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[29] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[28] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[27] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[26] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[25] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[24] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[23] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[22] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[21] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[20] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[19] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[18] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[17] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[16] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[15] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[14] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[13] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[12] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[11] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[10] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[9] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[8] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[7] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[6] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[5] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[4] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[3] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[2] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[1] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[0] in module fader is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1572.602 ; gain = 698.402
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1573.590 ; gain = 699.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1572.602 ; gain = 698.402
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1573.590 ; gain = 699.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1572.602 ; gain = 698.402
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1573.590 ; gain = 699.246
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1572.602 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1573.590 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/project_1/project_1.srcs/constrs_1/imports/PWM_LED_Chaser/top_1.xdc]
-Finished Parsing XDC File [C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/project_1/project_1.srcs/constrs_1/imports/PWM_LED_Chaser/top_1.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/project_1/project_1.srcs/constrs_1/imports/PWM_LED_Chaser/top_1.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Parsing XDC File [C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/PWM_LED_Chaser/PWM_LED_Chaser.srcs/constrs_1/imports/PWM_LED_Chaser/top_1.xdc]
+Finished Parsing XDC File [C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/PWM_LED_Chaser/PWM_LED_Chaser.srcs/constrs_1/imports/PWM_LED_Chaser/top_1.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/PWM_LED_Chaser/PWM_LED_Chaser.srcs/constrs_1/imports/PWM_LED_Chaser/top_1.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1652.676 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1651.117 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1654.391 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1652.266 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1654.391 ; gain = 780.191
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1652.266 ; gain = 777.922
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tfgg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1654.391 ; gain = 780.191
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1652.266 ; gain = 777.922
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1654.391 ; gain = 780.191
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1652.266 ; gain = 777.922
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1654.391 ; gain = 780.191
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1652.266 ; gain = 777.922
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -105,14 +138,18 @@ Detailed RTL Component Info :
 +---Adders : 
 	   3 Input   33 Bit       Adders := 1     
 	   2 Input   32 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 2     
 +---Registers : 
-	               32 Bit    Registers := 9     
+	               32 Bit    Registers := 10    
+	                6 Bit    Registers := 1     
 	                4 Bit    Registers := 1     
 	                1 Bit    Registers := 11    
 +---Muxes : 
 	   2 Input   32 Bit        Muxes := 4     
+	  65 Input   20 Bit        Muxes := 1     
 	   6 Input    4 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 8     
+	   2 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 9     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -128,26 +165,58 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-7129] Port init[31] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[30] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[29] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[28] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[27] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[26] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[25] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[24] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[23] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[22] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[21] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[20] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[19] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[18] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[17] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[16] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[15] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[14] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[13] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[12] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[11] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[10] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[9] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[8] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[7] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[6] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[5] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[4] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[3] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[2] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[1] in module fader is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init[0] in module fader is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 1657.938 ; gain = 783.738
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 1671.898 ; gain = 797.555
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1798.773 ; gain = 924.574
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1816.176 ; gain = 941.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 1832.465 ; gain = 958.266
+Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 1849.547 ; gain = 975.203
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 1832.465 ; gain = 958.266
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 1849.547 ; gain = 975.203
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -165,37 +234,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 2086.762 ; gain = 1212.562
+Finished IO Insertion : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 2102.934 ; gain = 1228.590
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 2086.762 ; gain = 1212.562
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 2102.934 ; gain = 1228.590
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 2086.762 ; gain = 1212.562
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 2102.934 ; gain = 1228.590
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 2086.762 ; gain = 1212.562
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 2102.934 ; gain = 1228.590
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 2086.762 ; gain = 1212.562
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 2102.934 ; gain = 1228.590
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 2086.762 ; gain = 1212.562
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 2102.934 ; gain = 1228.590
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -213,40 +282,40 @@ Report Cell Usage:
 +------+-------+------+
 |1     |BUFG   |     1|
 |2     |CARRY4 |    63|
-|3     |LUT1   |    43|
-|4     |LUT2   |    90|
-|5     |LUT3   |    70|
-|6     |LUT4   |    17|
+|3     |LUT1   |    48|
+|4     |LUT2   |    96|
+|5     |LUT3   |    33|
+|6     |LUT4   |    12|
 |7     |LUT5   |    10|
-|8     |LUT6   |     7|
-|9     |FDRE   |   176|
+|8     |LUT6   |    22|
+|9     |FDRE   |   153|
 |10    |FDSE   |     5|
 |11    |IBUF   |     1|
 |12    |IBUFDS |     1|
 |13    |OBUF   |     5|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 2086.762 ; gain = 1212.562
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 2102.934 ; gain = 1228.590
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:41 . Memory (MB): peak = 2086.762 ; gain = 1130.773
-Synthesis Optimization Complete : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 2086.762 ; gain = 1212.562
+Synthesis finished with 0 errors, 0 critical warnings and 32 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:41 . Memory (MB): peak = 2102.934 ; gain = 1149.914
+Synthesis Optimization Complete : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 2102.934 ; gain = 1228.590
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2086.762 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2102.934 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 64 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2094.090 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2116.129 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 2c4ae7f5
+Synth Design complete | Checksum: 521dbb4f
 INFO: [Common 17-83] Releasing license: Vivado_Synthesis
-30 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+30 Infos, 65 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:47 ; elapsed = 00:00:53 . Memory (MB): peak = 2094.090 ; gain = 1407.590
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2094.090 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/project_1/project_1.runs/synth_1/top.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:46 ; elapsed = 00:00:53 . Memory (MB): peak = 2116.129 ; gain = 1430.750
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2116.129 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/PWM_LED_Chaser/PWM_LED_Chaser.runs/synth_1/top.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Aug 11 20:09:51 2026...
+INFO: [Common 17-206] Exiting Vivado at Sat Aug 15 19:53:25 2026...

@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/project_1/project_1.runs/synth_1/top.tcl"
+  variable script "C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/PWM_LED_Chaser/PWM_LED_Chaser.runs/synth_1/top.tcl"
   variable category "vivado_synth"
 }
 
@@ -57,26 +57,28 @@ if {$::dispatch::connected} {
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param general.usePosixSpawnForFork 1
+set_param chipscope.maxJobs 3
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tfgg484-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/project_1/project_1.cache/wt [current_project]
-set_property parent.project_path C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/project_1/project_1.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/PWM_LED_Chaser/PWM_LED_Chaser.cache/wt [current_project]
+set_property parent.project_path C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/PWM_LED_Chaser/PWM_LED_Chaser.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/Users/garwo/FPGAProjects/PWM_LED_Chaser/project_1/project_1.cache/ip [current_project]
+set_property ip_output_repo c:/Users/garwo/FPGAProjects/PWM_LED_Chaser/PWM_LED_Chaser/PWM_LED_Chaser.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
-  C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/project_1/project_1.srcs/sources_1/imports/PWM_LED_Chaser/chaser.v
-  C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/project_1/project_1.srcs/sources_1/imports/PWM_LED_Chaser/chaser_to_pwm.v
-  C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/project_1/project_1.srcs/sources_1/imports/PWM_LED_Chaser/fader.v
-  C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/project_1/project_1.srcs/sources_1/imports/PWM_LED_Chaser/pwm_generator.v
-  C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/project_1/project_1.srcs/sources_1/imports/PWM_LED_Chaser/top.v
+  C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/PWM_LED_Chaser/PWM_LED_Chaser.srcs/sources_1/imports/PWM_LED_Chaser/chaser.v
+  C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/PWM_LED_Chaser/PWM_LED_Chaser.srcs/sources_1/imports/PWM_LED_Chaser/chaser_to_pwm.v
+  C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/PWM_LED_Chaser/PWM_LED_Chaser.srcs/sources_1/imports/PWM_LED_Chaser/fader.v
+  C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/PWM_LED_Chaser/PWM_LED_Chaser.srcs/sources_1/imports/PWM_LED_Chaser/pwm_generator.v
+  C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/PWM_LED_Chaser/PWM_LED_Chaser.srcs/sources_1/imports/PWM_LED_Chaser/top.v
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -87,8 +89,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/project_1/project_1.srcs/constrs_1/imports/PWM_LED_Chaser/top_1.xdc
-set_property used_in_implementation false [get_files C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/project_1/project_1.srcs/constrs_1/imports/PWM_LED_Chaser/top_1.xdc]
+read_xdc C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/PWM_LED_Chaser/PWM_LED_Chaser.srcs/constrs_1/imports/PWM_LED_Chaser/top_1.xdc
+set_property used_in_implementation false [get_files C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/PWM_LED_Chaser/PWM_LED_Chaser.srcs/constrs_1/imports/PWM_LED_Chaser/top_1.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

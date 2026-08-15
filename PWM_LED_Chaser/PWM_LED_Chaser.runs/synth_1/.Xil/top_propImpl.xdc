@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/project_1/project_1.srcs/constrs_1/imports/PWM_LED_Chaser/top_1.xdc rfile:../../../project_1.srcs/constrs_1/imports/PWM_LED_Chaser/top_1.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/garwo/FPGAProjects/PWM_LED_Chaser/PWM_LED_Chaser/PWM_LED_Chaser.srcs/constrs_1/imports/PWM_LED_Chaser/top_1.xdc rfile:../../../PWM_LED_Chaser.srcs/constrs_1/imports/PWM_LED_Chaser/top_1.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:17 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN R4 [get_ports sys_clk_p]
 set_property src_info {type:XDC file:1 line:19 export:INPUT save:INPUT read:READ} [current_design]

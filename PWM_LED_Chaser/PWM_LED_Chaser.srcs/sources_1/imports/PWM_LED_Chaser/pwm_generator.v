@@ -1,6 +1,6 @@
 module pwm_generator #(
 	//parameter DUTYCYCLE = 70, //MUST BE an Integer between 0 and the period
-	parameter PERIOD = 100 //MUST BE AN INTEGER GREATER THAN 1. Is number of base clk cycles in a period
+	parameter PERIOD = 1000 //MUST BE AN INTEGER GREATER THAN 1. Is number of base clk cycles in a period
 )(
 	input clk,
 	input rst_n,
